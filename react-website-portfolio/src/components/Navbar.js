@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { Button } from './Button';
@@ -18,13 +18,17 @@ function Navbar() {
         }
     };
 
+    useEffect(() => {
+        showButton(); 
+    }, []);
+
     window.addEventListener('resize', showButton);
 
     return (
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <Link to="/" className="navbar-logo">
+                    <Link to="/" className="navbar-logo" onCLick={closeMobileMenu}>
                         TRVL <i className="fab fa-typo3"/>
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
@@ -36,22 +40,22 @@ function Navbar() {
                                 Home
                             </Link>
                         </li>
-                        <li className='nav-item'>
+                        <li className='about-me'>
                             <Link to='/aboutMe' className='nav-links' onClick={closeMobileMenu}>
                                 About Me
                             </Link>
                         </li>
-                        <li className='nav-item'>
+                        <li className='projects'>
                             <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
                                 Projects
                             </Link>
                         </li>
-                        <li className='nav-item'>
+                        <li className='resume'>
                             <Link to='/resume' className='nav-links' onClick={closeMobileMenu}>
                                 Resume
                             </Link>
                         </li>
-                        <li className='nav-item'>
+                        <li className='contact-me'>
                             <Link to='/contact-me' className='nav-links-mobile' onClick={closeMobileMenu}>
                                 Contact Me
                             </Link>

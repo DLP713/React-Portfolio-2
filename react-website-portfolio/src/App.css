@@ -6,8 +6,9 @@
   }
   
   .home,
-  .services,
-  .products,
+  .about-me,
+  .projects,
+  .resume,
   .contact-me {
     display: flex;
     height: 90vh;
@@ -16,7 +17,7 @@
     font-size: 3rem;
   }
   
-  .services {
+  .about-me {
     background-image: url('./images/img-2.jpg');
     background-position: center;
     background-size: cover;
@@ -25,7 +26,7 @@
     font-size: 100px;
   }
   
-  .products {
+  .projects {
     background-image: url('./images/img-1.jpg');
     background-position: center;
     background-size: fill;
@@ -34,6 +35,15 @@
     font-size: 100px;
   }
   
+  .resume {
+    background-image: url('./images/img-3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+  }
+
   .contact-me {
     background-image: url('./images/img-8.jpg');
     background-position: center;
